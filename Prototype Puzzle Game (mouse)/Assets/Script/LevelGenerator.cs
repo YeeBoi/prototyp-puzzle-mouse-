@@ -20,11 +20,9 @@ public class LevelGenerator : MonoBehaviour {
 
     [SerializeField]
     private int level;
-    public static GameObject player;
 
 
     void Start() {
-        player = Instantiate((GameObject)Resources.Load("Player"), new Vector3(0, 0), transform.rotation);
         if(level == 1) {
             initiateLevelTest();
         }
@@ -37,11 +35,9 @@ public class LevelGenerator : MonoBehaviour {
     private List<Button> initiateButtonLevelTest() {
         List<Button> buttonList = new List<Button>();
         Button button1 = new Button(new Vector2(2, 8), 'R');
-        Button button2 = new Button(new Vector2(6, 4), 'D');
         Button button3 = new Button(new Vector2(4, 2), 'G');
         Button button4 = new Button(new Vector2(7, 7), 'O');
         buttonList.Add(button1);
-        buttonList.Add(button2);
         buttonList.Add(button3);
         buttonList.Add(button4);
         return buttonList;

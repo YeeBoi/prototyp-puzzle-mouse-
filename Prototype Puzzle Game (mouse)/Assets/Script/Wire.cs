@@ -14,7 +14,6 @@ public class Wire : MonoBehaviour {
     private GameObject zone;
     private List<Vector2> zoneColor;
     private List<Vector2> positionZoneColor = new List<Vector2>();
-    private Vector2 wireDirection = new Vector2();
     private bool activate = false;
     private bool mixColorChange = true;
     private bool isActive = false;
@@ -27,7 +26,7 @@ public class Wire : MonoBehaviour {
         zoneColor = new List<Vector2>();
     }
 
-    public Wire(Vector2 firstPosition, Vector2 direction, char c) : this () {
+    public Wire(Vector2 firstPosition, char c) : this () {
         string color;
         if (c == 'B') {
             color = "blue";
@@ -462,14 +461,6 @@ public class Wire : MonoBehaviour {
 
     public List<Vector2> getWirePosition() {
         return wirePosition;
-    }
-
-    public void setWireDirection(Vector2 wireDirection) {
-        this.wireDirection = wireDirection;
-    }
-
-    public Vector2 getWireDirection() {
-        return wireDirection;
     }
 
     public void setActivate (bool activate) {
